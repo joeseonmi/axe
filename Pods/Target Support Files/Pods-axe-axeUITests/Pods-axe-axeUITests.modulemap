@@ -1,0 +1,6 @@
+framework module Pods_axe_axeUITests {
+  umbrella header "Pods-axe-axeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
