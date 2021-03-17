@@ -12,7 +12,9 @@ extension UIColor {
     class var axe_contents: UIColor {
         return UIColor(red: 38/255, green: 38/255, blue: 38/255, alpha: 1)
     }
-    
+    class var axe_contents_tint: UIColor {
+        return UIColor(red: 83/255, green: 109/255, blue: 38/255, alpha: 1)
+    }
     class var axe_tint: UIColor {
         return UIColor(red: 173/255, green: 171/255, blue: 99/255, alpha: 1)
     }

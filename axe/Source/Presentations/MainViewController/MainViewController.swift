@@ -10,7 +10,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class MainViewController: UIViewController {
+class MainViewController: AxeNavigationController {
 
 //    enum Menu: String, CaseIterable {
 //        case note = "노트"
@@ -32,24 +32,29 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         attribute()
         layout()
+        bind()
     }
     
     func bind() {
-        
+        let vc = BookNoteDetailViewController()
+        self.pushViewController(vc, animated: true)
+
         self.noteBtn.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 guard let `self` = self else { return }
                 self.menuList.forEach { $0.isOn($0 == self.noteBtn) }
+                let vc = BookNoteDetailViewController()
+                self.pushViewController(vc, animated: true)
             })
             .disposed(by: self.disposeBag)
-        
+
         self.trackerBtn.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 guard let `self` = self else { return }
                 self.menuList.forEach { $0.isOn($0 == self.trackerBtn) }
             })
             .disposed(by: self.disposeBag)
-        
+
         self.libraryBtn.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 guard let `self` = self else { return }
@@ -60,9 +65,8 @@ class MainViewController: UIViewController {
     }
     
     private func attribute() {
-        
+        self.hideNaviBar()
         self.menuList = [self.noteBtn, self.trackerBtn, self.libraryBtn]
-        
         self.noteBtn.setTitle("노트", for: .normal)
         self.trackerBtn.setTitle("트래커", for: .normal)
         self.libraryBtn.setTitle("내 서재", for: .normal)
