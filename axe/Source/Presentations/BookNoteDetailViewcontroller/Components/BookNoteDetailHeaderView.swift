@@ -65,12 +65,18 @@ class BookNoteDetailHeaderView: UIView {
         self.stackView.axis = .horizontal
         self.stackView.spacing = 15
         let test = HighlighterButton()
-        test.setTitle("질문", for: .normal)
+        test.setTitle("전체", for: .normal)
         let test2 = HighlighterButton()
-        test2.setTitle("인용문", for: .normal)
+        test2.setTitle("질문", for: .normal)
+        let test3 = HighlighterButton()
+        test3.setTitle("인용문", for: .normal)
+        let test4 = HighlighterButton()
+        test4.setTitle("내 생각", for: .normal)
         test.isOn(true)
         self.stackView.addArrangedSubview(test)
         self.stackView.addArrangedSubview(test2)
+        self.stackView.addArrangedSubview(test3)
+        self.stackView.addArrangedSubview(test4)
         
     }
     
@@ -108,33 +114,34 @@ class BookNoteDetailHeaderView: UIView {
         self.bookImageView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(16)
             $0.leading.equalTo(titleLabel)
-            $0.width.equalToSuperview().multipliedBy(0.3)
+            let bounds = UIScreen.main.bounds
+            $0.width.equalTo(bounds.size.width / 3)
             $0.height.equalTo(self.bookImageView.snp.width).multipliedBy(1.45)
             $0.bottom.lessThanOrEqualToSuperview().offset(-40)
         }
-        
+
         self.bookTitleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(16)
             $0.leading.equalTo(bookImageView.snp.trailing).offset(12)
             $0.trailing.greaterThanOrEqualToSuperview().offset(-12)
         }
-        
+
         self.bookWriterLabel.snp.makeConstraints {
             $0.top.equalTo(bookTitleLabel.snp.bottom).offset(4)
             $0.leading.equalTo(bookTitleLabel)
             $0.trailing.equalToSuperview().offset(-12)
         }
-        
+
         self.totalInfoLabel.snp.makeConstraints {
             $0.top.equalTo(bookWriterLabel.snp.bottom).offset(20)
             $0.leading.trailing.equalTo(bookWriterLabel)
         }
-        
+
         self.ratingLabel.snp.makeConstraints {
             $0.top.equalTo(totalInfoLabel.snp.bottom).offset(4)
             $0.leading.trailing.equalTo(bookWriterLabel)
         }
-        
+
         self.divider.snp.makeConstraints {
             $0.top.equalTo(ratingLabel.snp.bottom).offset(20)
             $0.height.equalTo(1)
@@ -142,24 +149,24 @@ class BookNoteDetailHeaderView: UIView {
             $0.leading.equalTo(bookWriterLabel)
             $0.bottom.lessThanOrEqualToSuperview().offset(-40)
         }
-        
+
         self.patternView.snp.makeConstraints {
             $0.height.equalTo(24)
             $0.top.equalTo(bookInfoBGView.snp.bottom).offset(-24)
             $0.leading.trailing.equalToSuperview()
         }
-        
+
         self.stackView.snp.makeConstraints {
             $0.top.equalTo(patternView.snp.bottom).offset(4)
             $0.trailing.equalToSuperview().offset(-13)
             $0.leading.greaterThanOrEqualToSuperview().offset(13)
         }
-        
+
         self.divider2.snp.makeConstraints {
             $0.top.equalTo(stackView.snp.bottom).offset(4)
             $0.height.equalTo(1)
             $0.leading.trailing.equalToSuperview()
-//            $0.bottom.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
         
     }

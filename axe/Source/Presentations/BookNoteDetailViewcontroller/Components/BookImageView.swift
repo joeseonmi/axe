@@ -35,7 +35,7 @@ class BookImageView: UIView {
     }
     
     private func attribute() {
-        self.imageView.contentMode = .scaleToFill
+        self.imageView.contentMode = .scaleAspectFill
         self.imageView.corner(radius: 2)
         
         self.shadowView2.cornerWithMaskToBound(radius: 2)
@@ -74,10 +74,7 @@ class BookImageView: UIView {
             $0.top.bottom.leading.trailing.equalTo(imageView)
         }
         self.imageView.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.equalToSuperview().offset(5)
-            $0.trailing.equalToSuperview().offset(-5)
-            $0.bottom.equalToSuperview().offset(-5)
+            $0.top.leading.trailing.bottom.equalToSuperview()
         }
         self.shadowMask.snp.makeConstraints {
             $0.top.bottom.leading.trailing.equalTo(imageView)

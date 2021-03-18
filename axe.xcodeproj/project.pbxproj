@@ -30,6 +30,7 @@
 		26FD8EFD2601C6B9006DE20A /* BookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD8EFC2601C6B9006DE20A /* BookImageView.swift */; };
 		26FD8F022601E3F5006DE20A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD8F012601E3F5006DE20A /* UIViewExtension.swift */; };
 		26FD8F4B26022F86006DE20A /* HighlighterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD8F4A26022F86006DE20A /* HighlighterButton.swift */; };
+		26FD8F6E2602EB3D006DE20A /* BookNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD8F6D2602EB3C006DE20A /* BookNoteCell.swift */; };
 		38BF73FBEF186953CBD8014D /* Pods_axeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F8531296FA8B434B58A638 /* Pods_axeTests.framework */; };
 		A5B79C25DA17DE3EFA059672 /* Pods_axe_axeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E528F1E6FF460265A1A18BA8 /* Pods_axe_axeUITests.framework */; };
 		CB924D3A4BB04E5AE63A891E /* Pods_axe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD4C43A845B71D7D83DDAEF /* Pods_axe.framework */; };
@@ -82,6 +83,7 @@
 		26FD8EFC2601C6B9006DE20A /* BookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageView.swift; sourceTree = "<group>"; };
 		26FD8F012601E3F5006DE20A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		26FD8F4A26022F86006DE20A /* HighlighterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlighterButton.swift; sourceTree = "<group>"; };
+		26FD8F6D2602EB3C006DE20A /* BookNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNoteCell.swift; sourceTree = "<group>"; };
 		38C918B022DFDA10046E764D /* Pods-axe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-axe.release.xcconfig"; path = "Target Support Files/Pods-axe/Pods-axe.release.xcconfig"; sourceTree = "<group>"; };
 		4F8480A3E7864486E50DCB8B /* Pods-axe-axeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-axe-axeUITests.debug.xcconfig"; path = "Target Support Files/Pods-axe-axeUITests/Pods-axe-axeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		51F8531296FA8B434B58A638 /* Pods_axeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_axeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +260,7 @@
 				26FD8EF72601C5AD006DE20A /* BookNoteDetailHeaderView.swift */,
 				26FD8EFC2601C6B9006DE20A /* BookImageView.swift */,
 				26FD8F4A26022F86006DE20A /* HighlighterButton.swift */,
+				26FD8F6D2602EB3C006DE20A /* BookNoteCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				26FD8EFD2601C6B9006DE20A /* BookImageView.swift in Sources */,
 				26B52DE725B9D23D002720AB /* Colors.swift in Sources */,
 				26B52DCC25B9CFCF002720AB /* Book.swift in Sources */,
+				26FD8F6E2602EB3D006DE20A /* BookNoteCell.swift in Sources */,
 				26B52DDA25B9D203002720AB /* Labels.swift in Sources */,
 				26FD8ED92601954A006DE20A /* BookNoteDetailViewModel.swift in Sources */,
 				26FD8F022601E3F5006DE20A /* UIViewExtension.swift in Sources */,

@@ -39,6 +39,11 @@ class BookNoteDetailViewController: UIViewController {
             $0.bottom.equalTo(view.safeArea.bottom)
         }
         
+        self.tableHeader.snp.makeConstraints {
+            $0.top.bottom.leading.trailing.equalToSuperview()
+            $0.width.equalToSuperview()
+        }
+        
     }
 
 }
