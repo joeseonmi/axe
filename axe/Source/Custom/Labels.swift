@@ -19,23 +19,3 @@ extension UILabel {
 extension UIButton {
    
 }
-
-extension UIView {
-    var safeArea: ConstraintBasicAttributesDSL {
-        if #available(iOS 11.0, *) {
-            return self.safeAreaLayoutGuide.snp
-        } else {
-            return self.snp
-        }
-    }
-    
-    func corner(radius: CGFloat) {
-        self.layer.cornerRadius = radius
-        self.clipsToBounds = true
-    }
-    
-    func border(width: CGFloat, color: UIColor) {
-        self.layer.borderWidth = width
-        self.layer.borderColor = color.cgColor
-    }
-}

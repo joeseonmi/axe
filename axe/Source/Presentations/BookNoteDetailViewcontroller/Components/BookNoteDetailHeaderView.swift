@@ -23,6 +23,8 @@ class BookNoteDetailHeaderView: UIView {
     private lazy var stackView = UIStackView()
     private lazy var divider2 = UIView()
     
+    private var isOpen = true
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.attribute()
@@ -43,12 +45,11 @@ class BookNoteDetailHeaderView: UIView {
     }
     
     func expand(on: Bool) {
-        
+       
     }
     
     private func attribute() {
-        self.dot.backgroundColor = .axe_tint
-        self.dot.alpha = 0.1
+        self.dot.backgroundColor = .axe_tint_10
         self.dot.corner(radius: 14)
         self.bookInfoBGView.backgroundColor = .axe_BG01
         self.titleLabel.textColor = .axe_contents
@@ -59,8 +60,7 @@ class BookNoteDetailHeaderView: UIView {
         self.divider.backgroundColor = .axe_tint
         
         self.patternView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "pattern"))
-        self.divider2.backgroundColor = .axe_tint
-        self.divider2.alpha = 0.1
+        self.divider2.backgroundColor = .axe_tint_10
         
         self.stackView.axis = .horizontal
         self.stackView.spacing = 15

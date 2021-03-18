@@ -31,7 +31,7 @@ class BookImageView: UIView {
     }
     
     func configureView() {
-        self.imageView.image = UIImage(named: "test2")
+        self.imageView.image = UIImage(named: "test")
     }
     
     private func attribute() {

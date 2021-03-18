@@ -20,7 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = BookNoteDetailViewController(nibName: nil, bundle: nil) // 루트 뷰컨트롤러 생성
+        let root = MainViewController(nibName: nil, bundle: nil)
+        let navi = AxeNavigationController(rootViewController: root)
+        window?.rootViewController = navi // 루트 뷰컨트롤러 생성
         window?.makeKeyAndVisible()
     }
 

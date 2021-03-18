@@ -15,8 +15,14 @@ extension UIColor {
     class var axe_contents_tint: UIColor {
         return UIColor(red: 83/255, green: 109/255, blue: 38/255, alpha: 1)
     }
+    class var axe_contents_tint_20: UIColor {
+        return UIColor(red: 83/255, green: 109/255, blue: 38/255, alpha: 0.2)
+    }
     class var axe_tint: UIColor {
         return UIColor(red: 173/255, green: 171/255, blue: 99/255, alpha: 1)
+    }
+    class var axe_tint_10: UIColor {
+        return UIColor(red: 173/255, green: 171/255, blue: 99/255, alpha: 0.1)
     }
     class var axe_BG01: UIColor {
         return UIColor(red: 244/255, green: 244/255, blue: 234/255, alpha: 1)
