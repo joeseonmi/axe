@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class BookNoteDetailViewController: UIViewController {
+class BookNoteDetailViewController: AxeViewController {
     
     private lazy var tableView = UITableView()
     private lazy var tableHeader = BookNoteDetailHeaderView()

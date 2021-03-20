@@ -11,10 +11,11 @@ class BookNoteCell: UITableViewCell {
     
     private lazy var typeIconView = UIImageView()
     private lazy var dateLabel = UILabel(fontFamily: .light, size: 11)
-    private lazy var editButton = UIButton()
     private lazy var titleLabel = UILabel(fontFamily: .medium, size: 14)
     private lazy var contentsLabel = UILabel(fontFamily: .light, size: 14)
     private lazy var divier = UIView()
+    
+    //TODO: - 스와이프해서 에딧하는 기능 넣기
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

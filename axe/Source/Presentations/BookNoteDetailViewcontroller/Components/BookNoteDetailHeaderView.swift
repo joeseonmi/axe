@@ -96,7 +96,7 @@ class BookNoteDetailHeaderView: UIView {
         
         self.dot.snp.makeConstraints {
             $0.width.height.equalTo(28)
-            $0.top.equalToSuperview().offset(30)
+            $0.top.equalToSuperview().offset(24)
             $0.leading.equalToSuperview().offset(12)
         }
         

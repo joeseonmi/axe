@@ -20,7 +20,8 @@
 		26B52DDA25B9D203002720AB /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B52DD925B9D203002720AB /* Labels.swift */; };
 		26B52DE225B9D232002720AB /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B52DE125B9D232002720AB /* FontFamily.swift */; };
 		26B52DE725B9D23D002720AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B52DE625B9D23D002720AB /* Colors.swift */; };
-		26FD8EAB25DEB016006DE20A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD8EAA25DEB016006DE20A /* MainViewController.swift */; };
+		26E0C8952603895200EB7AA5 /* AxeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0C8942603895200EB7AA5 /* AxeViewController.swift */; };
+		26E0C8A0260589A400EB7AA5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0C89F260589A400EB7AA5 /* MainTabBarController.swift */; };
 		26FD8EB625DEB07F006DE20A /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD8EB525DEB07F006DE20A /* Buttons.swift */; };
 		26FD8EC325DEB3B3006DE20A /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2647D84225BB09DC00E0B941 /* GmarketSansLight.otf */; };
 		26FD8ED12601953B006DE20A /* BookNoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD8ED02601953B006DE20A /* BookNoteDetailViewController.swift */; };
@@ -74,7 +75,8 @@
 		26B52DD925B9D203002720AB /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		26B52DE125B9D232002720AB /* FontFamily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
 		26B52DE625B9D23D002720AB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		26FD8EAA25DEB016006DE20A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		26E0C8942603895200EB7AA5 /* AxeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxeViewController.swift; sourceTree = "<group>"; };
+		26E0C89F260589A400EB7AA5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		26FD8EB525DEB07F006DE20A /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		26FD8ED02601953B006DE20A /* BookNoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNoteDetailViewController.swift; sourceTree = "<group>"; };
 		26FD8ED82601954A006DE20A /* BookNoteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNoteDetailViewModel.swift; sourceTree = "<group>"; };
@@ -223,25 +225,34 @@
 				26FD8EB525DEB07F006DE20A /* Buttons.swift */,
 				26FD8EF22601A370006DE20A /* AxeNavigationController.swift */,
 				26FD8F012601E3F5006DE20A /* UIViewExtension.swift */,
+				26E0C8942603895200EB7AA5 /* AxeViewController.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		26E0C8902603846800EB7AA5 /* BookNoteListViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookNoteListViewController;
 			sourceTree = "<group>";
 		};
 		26FD8EA825DEAFE7006DE20A /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				26E0C8902603846800EB7AA5 /* BookNoteListViewController */,
 				26FD8ECF26019521006DE20A /* BookNoteDetailViewcontroller */,
-				26FD8EA925DEAFFC006DE20A /* MainViewController */,
+				26FD8EA925DEAFFC006DE20A /* MainTabBarController */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
 		};
-		26FD8EA925DEAFFC006DE20A /* MainViewController */ = {
+		26FD8EA925DEAFFC006DE20A /* MainTabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				26FD8EAA25DEB016006DE20A /* MainViewController.swift */,
+				26E0C89F260589A400EB7AA5 /* MainTabBarController.swift */,
 			);
-			path = MainViewController;
+			path = MainTabBarController;
 			sourceTree = "<group>";
 		};
 		26FD8ECF26019521006DE20A /* BookNoteDetailViewcontroller */ = {
@@ -529,6 +540,7 @@
 			files = (
 				26B52DD425B9CFEE002720AB /* Review.swift in Sources */,
 				26FD8EFD2601C6B9006DE20A /* BookImageView.swift in Sources */,
+				26E0C8952603895200EB7AA5 /* AxeViewController.swift in Sources */,
 				26B52DE725B9D23D002720AB /* Colors.swift in Sources */,
 				26B52DCC25B9CFCF002720AB /* Book.swift in Sources */,
 				26FD8F6E2602EB3D006DE20A /* BookNoteCell.swift in Sources */,
@@ -539,12 +551,12 @@
 				2647D84925BB139B00E0B941 /* UnderLineBtn.swift in Sources */,
 				26FD8EB625DEB07F006DE20A /* Buttons.swift in Sources */,
 				26FD8ED12601953B006DE20A /* BookNoteDetailViewController.swift in Sources */,
+				26E0C8A0260589A400EB7AA5 /* MainTabBarController.swift in Sources */,
 				26FD8EF82601C5AD006DE20A /* BookNoteDetailHeaderView.swift in Sources */,
 				26B52D8825B9CC09002720AB /* AppDelegate.swift in Sources */,
 				26B52DE225B9D232002720AB /* FontFamily.swift in Sources */,
 				26FD8F4B26022F86006DE20A /* HighlighterButton.swift in Sources */,
 				26B52D8A25B9CC09002720AB /* SceneDelegate.swift in Sources */,
-				26FD8EAB25DEB016006DE20A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

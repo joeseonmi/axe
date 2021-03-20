@@ -15,9 +15,14 @@ class AxeNavigationController: UINavigationController {
     }
     
     private func attribute() {
-        self.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "BackButton")
-        self.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "BackButton")
         self.navigationBar.barTintColor = .white
+        self.navigationBar.isTranslucent = false
+        self.navigationBar.shadowImage = UIImage()
+        self.hidesBarsWhenKeyboardAppears = true
+        self.navigationBar.tintColor = .axe_contents
+        let backImage = #imageLiteral(resourceName: "BackButton")
+        self.navigationBar.backIndicatorImage = backImage
+        self.navigationBar.backIndicatorTransitionMaskImage = backImage
     }
     
     func hideNaviBar() {

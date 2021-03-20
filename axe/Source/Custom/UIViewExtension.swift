@@ -46,3 +46,14 @@ extension UIImageView {
     }
     
 }
+
+extension UIButton {
+    
+    func tinted(image: UIImage, color: UIColor) {
+        self.tintColor = color
+        let image = image.withRenderingMode(.alwaysTemplate)
+        self.setImage(image, for: .normal)
+    }
+    
+}
+
