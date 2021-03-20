@@ -30,6 +30,8 @@ class MainTabBarController: UITabBarController {
     let tabBarHeight: CGFloat = 48.0
     
     let bookNoteDetailView = BookNoteDetailViewController()
+    let trackerView = TrackerViewController()
+    let userInfoView = UserInfoViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +47,14 @@ class MainTabBarController: UITabBarController {
         self.view.backgroundColor = .white
         
         bookNoteDetailView.tabBarItem = self.tabs[.notes]
+        trackerView.tabBarItem = self.tabs[.tracker]
+        userInfoView.tabBarItem = self.tabs[.library]
+        
         self.viewControllers = [
-            AxeNavigationController(rootViewController: bookNoteDetailView)
+            AxeNavigationController(rootViewController: bookNoteDetailView),
+            AxeNavigationController(rootViewController: trackerView),
+            AxeNavigationController(rootViewController: userInfoView)
         ]
-        
-        
         
     }
     
@@ -59,24 +64,33 @@ class MainTabBarController: UITabBarController {
         
         /* 노치 디자인이 아닌경우 하단 마진 추가 */
         let tabBarBottomMargin: CGFloat = isNotch ? 20.0 : 0.0
+        
+        /* 탭바의 높이값 지정 */
         tabBar.frame.size.height = tabBarHeight
         
-        /* 탭바의 Y좌표 설정 */
+        /* 탭바의 Y좌표 설정 - 둥둥 떠있을꺼니까 */
         let tabBarY = self.view.safeAreaLayoutGuide.layoutFrame.maxY - tabBarHeight - tabBarBottomMargin
         tabBar.frame.origin.y = tabBarY
         
         /* 탭바의 배경(흐릿한부분)과 그림자를 없애준다 */
         self.tabBar.backgroundImage = UIImage()
         self.tabBar.shadowImage = UIImage()
+        
+        /* 틴트컬러 추가 */
         self.tabBar.tintColor = .axe_contents_tint
 
         /* 동그란 쉐입과 그림자 씌워주기 */
         let layer = CAShapeLayer()
-        layer.path = UIBezierPath(roundedRect: CGRect(x: 30,
+        let tabBarItemSpacing: CGFloat = 60.0
+        let tabBarItemWidth: CGFloat = 30.0
+        let tabBarWidth: CGFloat = (tabBarItemWidth * CGFloat(self.tabs.count)) + (tabBarItemSpacing * (CGFloat(self.tabs.count - 1))) + (tabBarItemWidth * 2)
+        
+        layer.path = UIBezierPath(roundedRect: CGRect(x: (tabBar.bounds.maxX - tabBarWidth) / 2 ,
                                                       y: tabBar.bounds.minY,
-                                                      width: tabBar.bounds.width - 60,
+                                                      width: tabBarWidth,
                                                       height: tabBar.bounds.height),
                                   cornerRadius: (tabBar.frame.width/2)).cgPath
+        
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 2, height: 2)
         layer.shadowRadius = 10
@@ -89,13 +103,15 @@ class MainTabBarController: UITabBarController {
       
         tabBar.layer.insertSublayer(layer, at: 0)
     
+        /* 탭바 아이템들의 위치를 내 맘에 들게 조정 */
         if let items = tabBar.items {
             items.forEach { item in
                 item.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 2, right: 0)
                 item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -4)
             }
         }
-        tabBar.itemWidth = 30.0
+        tabBar.itemSpacing = tabBarItemSpacing
+        tabBar.itemWidth = tabBarItemWidth
         tabBar.itemPositioning = .centered
     }
     
