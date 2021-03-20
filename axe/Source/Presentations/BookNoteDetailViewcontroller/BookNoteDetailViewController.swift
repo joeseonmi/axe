@@ -57,12 +57,16 @@ class BookNoteDetailViewController: AxeViewController {
     }
     
     private func attribute() {
+        if let navi = self.navigationController as? AxeNavigationController {
+            navi.hideNaviBar()
+        }
         self.view.backgroundColor = .white
         self.tableView.tableHeaderView = self.tableHeader
         self.tableView.separatorStyle = .none
         self.tableView.register(BookNoteCell.self,
                                 forCellReuseIdentifier: String(describing: BookNoteCell.self))
         self.tableView.backgroundColor = .white
+//        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
     }
     
     private func layout() {

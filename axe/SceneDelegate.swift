@@ -20,9 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let root = MainTabBarController(nibName: nil, bundle: nil)
-        let navi = AxeNavigationController(rootViewController: root)
-        window?.rootViewController = navi // 루트 뷰컨트롤러 생성
+        window?.rootViewController = MainTabBarController() // 루트 뷰컨트롤러 생성
         window?.makeKeyAndVisible()
     }
 
