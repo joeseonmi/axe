@@ -23,6 +23,7 @@ class AxeNavigationController: UINavigationController {
         let backImage = #imageLiteral(resourceName: "BackButton")
         self.navigationBar.backIndicatorImage = backImage
         self.navigationBar.backIndicatorTransitionMaskImage = backImage
+        
     }
     
     func hideNaviBar() {
