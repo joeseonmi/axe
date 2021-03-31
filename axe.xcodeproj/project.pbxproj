@@ -24,6 +24,8 @@
 		26E0C8A0260589A400EB7AA5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0C89F260589A400EB7AA5 /* MainTabBarController.swift */; };
 		26E0C8B72605B80900EB7AA5 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0C8B62605B80900EB7AA5 /* UserInfoViewController.swift */; };
 		26E0C8C32605B81800EB7AA5 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0C8C22605B81800EB7AA5 /* TrackerViewController.swift */; };
+		26E0C8CE2605C0CC00EB7AA5 /* BookNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0C8CD2605C0CC00EB7AA5 /* BookNoteListViewController.swift */; };
+		26E0C8D7261195DD00EB7AA5 /* BookNoteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0C8D6261195DD00EB7AA5 /* BookNoteListCell.swift */; };
 		26FD8EB625DEB07F006DE20A /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD8EB525DEB07F006DE20A /* Buttons.swift */; };
 		26FD8EC325DEB3B3006DE20A /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2647D84225BB09DC00E0B941 /* GmarketSansLight.otf */; };
 		26FD8ED12601953B006DE20A /* BookNoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD8ED02601953B006DE20A /* BookNoteDetailViewController.swift */; };
@@ -81,6 +83,8 @@
 		26E0C89F260589A400EB7AA5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		26E0C8B62605B80900EB7AA5 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		26E0C8C22605B81800EB7AA5 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
+		26E0C8CD2605C0CC00EB7AA5 /* BookNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNoteListViewController.swift; sourceTree = "<group>"; };
+		26E0C8D6261195DD00EB7AA5 /* BookNoteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNoteListCell.swift; sourceTree = "<group>"; };
 		26FD8EB525DEB07F006DE20A /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		26FD8ED02601953B006DE20A /* BookNoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNoteDetailViewController.swift; sourceTree = "<group>"; };
 		26FD8ED82601954A006DE20A /* BookNoteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNoteDetailViewModel.swift; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 		26E0C8902603846800EB7AA5 /* BookNoteListViewController */ = {
 			isa = PBXGroup;
 			children = (
+				26E0C8D5261195BE00EB7AA5 /* Components */,
+				26E0C8CD2605C0CC00EB7AA5 /* BookNoteListViewController.swift */,
 			);
 			path = BookNoteListViewController;
 			sourceTree = "<group>";
@@ -257,14 +263,22 @@
 			path = UserInfoViewController;
 			sourceTree = "<group>";
 		};
+		26E0C8D5261195BE00EB7AA5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				26E0C8D6261195DD00EB7AA5 /* BookNoteListCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		26FD8EA825DEAFE7006DE20A /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
-				26E0C8B42605B7DA00EB7AA5 /* UserInfoViewController */,
-				26E0C8B32605B7D000EB7AA5 /* TrackerViewController */,
+				26FD8EA925DEAFFC006DE20A /* MainTabBarController */,
 				26E0C8902603846800EB7AA5 /* BookNoteListViewController */,
 				26FD8ECF26019521006DE20A /* BookNoteDetailViewcontroller */,
-				26FD8EA925DEAFFC006DE20A /* MainTabBarController */,
+				26E0C8B42605B7DA00EB7AA5 /* UserInfoViewController */,
+				26E0C8B32605B7D000EB7AA5 /* TrackerViewController */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -562,6 +576,7 @@
 			files = (
 				26B52DD425B9CFEE002720AB /* Review.swift in Sources */,
 				26FD8EFD2601C6B9006DE20A /* BookImageView.swift in Sources */,
+				26E0C8CE2605C0CC00EB7AA5 /* BookNoteListViewController.swift in Sources */,
 				26E0C8952603895200EB7AA5 /* AxeViewController.swift in Sources */,
 				26B52DE725B9D23D002720AB /* Colors.swift in Sources */,
 				26B52DCC25B9CFCF002720AB /* Book.swift in Sources */,
@@ -572,6 +587,7 @@
 				26FD8EF32601A370006DE20A /* AxeNavigationController.swift in Sources */,
 				2647D84925BB139B00E0B941 /* UnderLineBtn.swift in Sources */,
 				26FD8EB625DEB07F006DE20A /* Buttons.swift in Sources */,
+				26E0C8D7261195DD00EB7AA5 /* BookNoteListCell.swift in Sources */,
 				26E0C8C32605B81800EB7AA5 /* TrackerViewController.swift in Sources */,
 				26FD8ED12601953B006DE20A /* BookNoteDetailViewController.swift in Sources */,
 				26E0C8A0260589A400EB7AA5 /* MainTabBarController.swift in Sources */,

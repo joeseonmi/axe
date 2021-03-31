@@ -29,7 +29,7 @@ class MainTabBarController: UITabBarController {
     
     let tabBarHeight: CGFloat = 48.0
     
-    let bookNoteDetailView = BookNoteDetailViewController()
+    let bookNoteDetailView = BookNoteListViewController()
     let trackerView = TrackerViewController()
     let userInfoView = UserInfoViewController()
 
